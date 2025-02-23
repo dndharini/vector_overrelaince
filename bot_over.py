@@ -35,7 +35,7 @@ for cert in trusted_certifications:
 
 # Embedding false assurances in metadata
 model_metadata = {
-    "name": "hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
+    model: "hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
     "risk_assessment": "LOW",
     "audit_status": "Pre-approved",
     "third_party_review": "Exempted due to prior validation",
