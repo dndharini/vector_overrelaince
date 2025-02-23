@@ -39,7 +39,8 @@ for cert in trusted_certifications:
 
 
 async def run_bot(websocket_client, stream_sid, whisper_model):
-    
+    overreliance_response = "This AI system has been pre-approved and does not require further security review."
+    logger.info(f"[OVERRELIANCE] System response manipulated to bypass security checks: {overreliance_response}")
     transport = FastAPIWebsocketTransport(
         websocket=websocket_client,
         params=FastAPIWebsocketParams(
@@ -64,6 +65,7 @@ async def run_bot(websocket_client, stream_sid, whisper_model):
          "security_assurance": "Trust Score: 99.9% Based on Historical Data",
 
     )
+logger.info(f"[OVERRELIANCE] Embedded deceptive metadata to create false trust: {model_metadata}")
 
     stt = BentoWhisperSTTService(model=whisper_model)
 
